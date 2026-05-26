@@ -1,5 +1,9 @@
-### %% THE MONTY PYTHON MARKOV CHAIN SIMULATOR ###
+### %% THE MARKOV CHAIN MONTY PYTHON SIMULATOR ###
 
+# --- Libraries ---
+
+library(ggplot2)
+library(patchwork) # For combining the plots side-by-side
 
 # --- Simulation Loop ---
 
@@ -79,9 +83,6 @@ for (i in seq_along(results)) {
   }
 }
 
-library(ggplot2)
-library(patchwork) # For combining the plots side-by-side
-
 # 1. Setup a "living" parrot matrix so the chain doesn't immediately stop
 states <- c("Resting", "Pining", "Stunned", "Vooming")
 matrix_data <- matrix(
@@ -122,7 +123,7 @@ df <- data.frame(
 # The chain has a high rate of autocorrelation and while you have many steps, too many adjacent are too similar
 # This will tank the independence of samples and you will have massive error margins and might miss the distribution shape entirely
 # Fix: -thinning (keeping only every xth observation)
-#     -increace iterations
+#      -increace iterations
 
 
 # Plots
