@@ -1,6 +1,11 @@
-## Monty Python Markov Chain Simulation ##
+# %% ## Monty Python Markov Chain Simulation ##
 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 import random
+
 from typing import Dict, List
 
 
@@ -49,7 +54,6 @@ class MarkovChainSimulator:
         return history
 
 
-
 # CONFIGURATION: Parrot Matrix
 
 norwegian_blue_matrix = {
@@ -79,33 +83,28 @@ if __name__ == "__main__":
             break
     else:
         print("\n Amazingly, it's still pining for the fjords.")
-      
-## Diagnostic Visualization
-  # %% Load Libraries
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 
+# %% Diagnostic Visualization
 
 # Simulation dummy data for execution safety:
 np.random.seed(42)
 states = ["Resting", "Pining", "Stunned", "Vooming"]
-df = pd.DataFrame({
-    "Tick": range(1, 1001),
-    "State": np.random.choice(states, size=1000)
-})
+df = pd.DataFrame(
+    {"Tick": range(1, 1001), "State": np.random.choice(states, size=1000)}
+)
 
 # Set a clean, minimalist style globally
 sns.set_theme(style="whitegrid")
 
-# %% Initialize Subplots (Side-by-Side)
+# Initialize Subplots (Side-by-Side)
 # This mimics R's `patchwork` layout engine
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
 
 # PLOT 1: Trace Plot
 # Python requires converting categories to numbers or strings to plot lines smoothly
-sns.lineplot(data=df, x="Tick", y="State", ax=ax1, color="#2c3e50", alpha=0.6, linewidth=1)
+sns.lineplot(
+    data=df, x="Tick", y="State", ax=ax1, color="#2c3e50", alpha=0.6, linewidth=1
+)
 sns.scatterplot(data=df, x="Tick", y="State", ax=ax1, color="#e74c3c", s=10, alpha=0.4)
 
 ax1.set_title("MCMC Trace Plot", fontsize=14, pad=10)
@@ -114,8 +113,18 @@ ax1.set_ylabel("State")
 
 # PLOT 2: Posterior Density Plot
 # stat="probability" gives you proportions instead of raw counts
-sns.histplot(data=df, x="State", ax=ax2, stat="probability", hue="State", 
-             palette="Spectral", shrink=0.7, edgecolor="black", alpha=0.7, legend=False)
+sns.histplot(
+    data=df,
+    x="State",
+    ax=ax2,
+    stat="probability",
+    hue="State",
+    palette="Spectral",
+    shrink=0.7,
+    edgecolor="black",
+    alpha=0.7,
+    legend=False,
+)
 
 ax2.set_title("State Frequency", fontsize=14, pad=10)
 ax2.set_xlabel("The 'Bins' of Long-Term Probability")

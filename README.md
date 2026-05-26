@@ -35,7 +35,7 @@ Because raw mathematical simulations can hide sampling bugs or structural biases
 
 ###  Convergence Diagnostics
 
-Both scripts are explicitly segmented into **Execution Cells** (`# %%` in Python, `# Section ----` in R). Running the simulation and plotting the diagnostic cells side-by-side reveals two critical metrics:
+Both scripts are explicitly segmented into **Execution Cells** (`# %%`). Running the simulation and plotting the diagnostic cells side-by-side reveals two metrics:
 
 1. **The Trace Plot (Sampling Timeline):** Tracks the path of the simulation step-by-step. 
    * *Expected Behavior:* A healthy run will show rapid, chaotic "fuzzy caterpillar" noise jumping dynamically between the transient biological states (`Resting`, `Pining`, `Stunned`) before flatlining permanently at the bottom once the parrot joins the choir invisible.
