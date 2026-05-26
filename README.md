@@ -1,9 +1,9 @@
-# ☠️🦜 Monty Python Markov Chain Simulation 🦜☠️
+# ☠️🦜 Markov Chain Monty Python Simulation 🦜☠️
 # 
 
 This repository contains reusable, boilerplate templates for running discrete-time **Markov Chain Monte Carlo (MCMC)** simulations in both **Python** and **R**. 
 
-To make the code readable and self-contained, the simulation models the behavioral states of the darling **Norwegian Blue Parrot** from Monty Python's *Dead Parrot Sketch*. It serves as a foundational boilerplate for tracking how an individual organism or population transitions through probabilistic life-history stages until hitting an absorbing state (`Ex-Parrot`).
+To make the code readable and self-contained, the simulation models the behavioral states of the dear, departed **Mister Polly Parrot** of Monty Python fame. It serves as a foundational boilerplate for tracking how an individual organism or population transitions through probabilistic life-history stages until hitting an absorbing state (`Ex-Parrot`).
 
 ## 🦜 The Transition Matrix Mathematics 🦜
 
@@ -40,7 +40,7 @@ Both scripts are explicitly segmented into **Execution Cells** (`# %%`). Running
 1. **The Trace Plot (Sampling Timeline):** Tracks the path of the simulation step-by-step. 
    * *Expected Behavior:* A healthy run will show rapid, chaotic "fuzzy caterpillar" noise jumping dynamically between the transient biological states (`Resting`, `Pining`, `Stunned`) before flatlining permanently at the bottom once the parrot joins the choir invisible.
    * *Failure Modes:* A sharp, clean diagonal cliff or bolt at the very start indicates a **Burn-in Failure** (the simulation started in an unnaturally rare state and took too long to find the true baseline). A slow, lazy wave indicates Low Effective Sample Size (ESS), meaning the model is too "sticky" and isn't moving freely between states.
-2. **The Marginal Posterior Distribution (State Frequency):** A categorical histogram showing the final, long-term proportion of time spent in each state. This verifies the empirical probability of an organism occupying a specific health bracket (e.g., the exact percentage of the timeline spent "Beautifully Pining" versus "Resting").
+2. **The Marginal Posterior Distribution (State Frequency):** A categorical histogram showing the final, long-term proportion of time spent in each state. This verifies the empirical probability of an organism occupying a specific health bracket (e.g., the exact percentage of the timeline spent "Pining for the Fjords" versus "Resting").
 
 ###  Directory Requirements
 To run the diagnostics locally, ensure your folders contain the standard environment configurations:
