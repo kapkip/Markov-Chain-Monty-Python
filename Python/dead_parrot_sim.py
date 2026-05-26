@@ -1,4 +1,4 @@
-# %% ## Monty Python Markov Chain Simulation ##
+# %% ## Markov Chain Monty Python Simulation ##
 
 import numpy as np
 import pandas as pd
