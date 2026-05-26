@@ -24,7 +24,7 @@ $$
 
 ### Key Concept: Absorbing States
 
-State 4 (`Ex-Parrot`) is an **absorbing state** because $P_{4,4} = 1.0$. Once the system transitions into this state, it can never leave. In epidemiology and survival analysis, this architecture directly mirrors irreversible multi-state disease progression or a terminal event (such as mortality, permanent recovery with full immunity, or tracking a vector moving from Susceptible $\rightarrow$ Infectious $\rightarrow$ Dead). It represents the definitive endpoint of a biological cohort.
+State 4 (`Ex-Parrot`) is an **absorbing state** because $P_{4,4} = 1.0$. Once the system transitions into this state, it can never leave. In epidemiology and survival analysis, this architecture directly mirrors irreversible multi-state disease progression or a terminal event (such as mortality, permanent recovery with full immunity, or tracking a vector moving from $S$ $\rightarrow$ $I$ $\rightarrow$ $R$). It represents the definitive endpoint of a biological cohort.
 
 ---
 
