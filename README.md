@@ -1,9 +1,9 @@
 # ☠️🦜 Markov Chain Monty Python Simulation 🦜☠️
 # 
 
-This repository contains reusable, boilerplate templates for running discrete-time **Markov Chain Monte Carlo (MCMC)** simulations in both **Python** and **R**. 
+This repository contains simplified, reusable, model templates for running discrete-time **Markov Chain Monte Carlo (MCMC)** simulations in both **Python** and **R**. 
 
-To make the code readable and self-contained, the simulation models the behavioral states of the dear, departed **Mister Polly Parrot** of Monty Python fame. It serves as a foundational boilerplate for tracking how an individual organism or population transitions through probabilistic life-history stages until hitting an absorbing state (`Ex-Parrot`).
+To make the code readable and self-contained, the simulation models the behavioral states of the dear, departed **Mister Polly Parrot** of Monty Python fame. It serves as a basic framework for tracking how an individual organism or population transitions through probabilistic life-history stages until hitting an absorbing state (`Ex-Parrot`).
 
 ## 🦜 The Transition Matrix Mathematics 🦜
 
@@ -24,7 +24,7 @@ $$
 
 ### Key Concept: Absorbing States
 
-State 4 (`Ex-Parrot`) is an **absorbing state** because $P_{4,4} = 1.0$. Once the system transitions into this state, it can never leave. In epidemiology and survival analysis, this architecture directly mirrors irreversible multi-state disease progression or a terminal event (such as mortality, permanent recovery with full immunity, or tracking a vector moving from $S$ $\rightarrow$ $I$ $\rightarrow$ $R$). It represents the definitive endpoint of a biological cohort.
+State 4 (`Ex-Parrot`) is an **absorbing state** because $P_{4,4} = 1.0$. Once the system transitions into this state, it can never leave. In epidemiology and survival analysis, this directly mirrors irreversible multi-state disease progression or a terminal event (such as mortality, permanent recovery with full immunity, or tracking a vector moving from $S$ -> $I$ -> $R$). It represents the definitive endpoint of a biological cohort.
 
 ---
 
